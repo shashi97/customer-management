@@ -1,0 +1,42 @@
+<section class="container">
+    <form name="addCustomerForm" novalidate class="container"> 
+        <ol class="breadcrumb breadcrumb-custom">
+            <li><a href='{}'>DXP Monitor</a></li>  
+                    
+        </ol> 
+        <div class="sda-form">
+            <article class="sda-form__block">
+                <header class="sda-form__block--header">
+                  Customer Information
+                </header>
+                <section class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Customer Name*</label>
+                            <input type="text" name="customerName" ng-model="customerInformation.uda.CustomerName" ng-required="true" class="form-control input-sm" />
+                            <span ng-show="submitted && addCustomerForm.customerName.$error.required">This value cannot be blank or empty.</span>            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Contact Name*</label>
+                            <input type="text" name="contactName" ng-model="customerInformation.uda.ContactName" ng-required="true" class="form-control input-sm" />
+                            <span ng-show="submitted && addCustomerForm.contactName.$error.required">This value cannot be blank or empty.</span>            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Contact Email*</label>
+                            <input type="text" name="contactEmail" ng-model="customerInformation.uda.ContactEmail" ng-required="true" class="form-control input-sm" />
+                            <span ng-show="submitted && addCustomerForm.contactEmail.$error.required">This value cannot be blank or empty.</span>            
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <div class="float-right">
+                <button type="button" ng-click="submitted='true';submitForm()"  class="btn btn-primary">Add Details</button>
+                <button type="button" ng-click="cancelRequest()" class="btn btn-danger">Clear</button>
+            </div>
+        </div>
+    </form>
+</section>
